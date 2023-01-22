@@ -99,7 +99,7 @@ body{
     .cards{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-top: 17rem;
+        margin: 0;
     }
     .card:first-of-type{
         border-radius: 1.5rem 0 0 1.5rem;
