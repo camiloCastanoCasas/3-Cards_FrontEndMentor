@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --fuentePrincipal: 'Big Shoulders Display', cursive;
+    --fuenteSecundaria: 'Lexend Deca', sans-serif;
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+
+    --transparentWhite : hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --veryLightGray : hsl(0, 0%, 95%); /*(background, headings, buttons)*/ 
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+*,*:before, *:after{
+    box-sizing: inherit; 
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryLightGray);
+}
+.cards{
+    max-width: 92rem;
+    width: 87%;
+    margin: 9rem 0;
+}
+.card{
+    padding: 5rem 5.6rem 5rem 5rem;
+}
+.card:first-of-type{
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+.card:last-of-type{
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+.card__img{
+    margin-bottom: 4rem;
+}
+.card__titulo{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-family: var(--fuentePrincipal);
+    color: var(--veryLightGray);
+    font-weight: 700;
+    margin-bottom: 3.3rem;
+}
+.card__parrafo{
+    font-size: 1.3rem;
+    color: var(--transparentWhite);
+    font-family: var(--fuenteSecundaria);
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 90%;
+    margin-bottom: 2.8rem;
+}
+.card__boton{
+    background-color: var(--veryLightGray) ;
+    padding: 1.3rem 3.3rem;
+    border: 2px solid #fff;
+    border-radius: 3rem;
+    font-family: var(--fuenteSecundaria);
+    font-family: 1.3rem;
+    transition: all .3s ease;
+}
+.card__boton:hover{
+    background: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+    color: var(--veryLightGray);
+}
+.naranja{
+    color: var(--brightOrange);
+}
+.verde{
+    color: var(--darkCyan);
+}
+.verdeOscuro{
+    color: var(--veryDarkCyan);
+}
+.bg-naranja{
+    background-color: var(--brightOrange);
+}
+.bg-verde{
+    background-color: var(--darkCyan);
+}
+.bg-verdeOscuro{
+    background-color: var(--veryDarkCyan);
+}
+@media (min-width: 768px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0;
+    }
+    .card:first-of-type{
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+    .card:last-of-type{
+        border-radius: 0 1.5rem 1.5rem 0;
+    }
+    .card__titulo{
+        margin-bottom: 4rem;
+    }
+    .card__parrafo{
+        margin-bottom: 8.6rem;
+    }
+}
